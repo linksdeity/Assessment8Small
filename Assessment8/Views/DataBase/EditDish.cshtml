@@ -1,0 +1,32 @@
+﻿@model Assessment8.Models.Dish
+@{
+    ViewBag.Title = "EditDish";
+}
+<h2>Edit Dish</h2>
+<form action="~/DataBase/ConfirmDishEdit" method="post">
+    <input type="hidden" name="DishID" value="@Model.DishID" />
+    <label> Dish Name: <input type="text" name="DishName" value="@Model.DishName" required /> </label> <br />
+    <label> Description: <input type="text" name="DishDescription" value="@Model.DishDescription" required /> </label> <br />
+    <label>
+        Food Option? <select name="FoodOption">
+            <option value="Main">Main</option>
+            <option value="Side">Side</option>
+            <option value="Veg">Veg</option>
+            <option value="Desert">Desert</option>
+        </select>
+    </label>
+    <br />
+    <label> Phone Number (no dashes or spaces!):<input type="text" name="PhoneNumber" value="@Model.PhoneNumber" required pattern="[0-9]{10}" /> </label> <br />
+
+    <label> Email: @Model.Email" <input type="hidden" name="Email" value="@Model.Email" /></label>
+    <br />
+
+    <label> Name: @Model.PersonName" <input type="hidden" name="PersonName" value="@Model.PersonName" /></label></label>
+    <br />
+
+
+    <input type="submit" class="btn-default" /> <br />
+
+</form>
+
+

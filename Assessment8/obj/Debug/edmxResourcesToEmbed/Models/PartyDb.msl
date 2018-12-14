@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TimPartyDbModelStoreContainer" CdmEntityContainer="TimPartyDbEntities">
+    <EntitySetMapping Name="Dishes">
+      <EntityTypeMapping TypeName="TimPartyDbModel.Dish">
+        <MappingFragment StoreEntitySet="Dish">
+          <ScalarProperty Name="FoodOption" ColumnName="FoodOption" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DishDescription" ColumnName="DishDescription" />
+          <ScalarProperty Name="DishName" ColumnName="DishName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="DishID" ColumnName="DishID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Guests">
+      <EntityTypeMapping TypeName="TimPartyDbModel.Guest">
+        <MappingFragment StoreEntitySet="Guest">
+          <ScalarProperty Name="Guest1" ColumnName="Guest" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AttendanceDate" ColumnName="AttendanceDate" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="GuestID" ColumnName="GuestID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

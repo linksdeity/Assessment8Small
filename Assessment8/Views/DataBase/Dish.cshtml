@@ -1,0 +1,27 @@
+﻿@model Assessment8.Models.DishModel
+@{
+    ViewBag.Title = "New Dish";
+}
+
+<h2>New Dish</h2>
+
+
+@using (Html.BeginForm("Dish", "DataBase", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+
+    <br />
+    @Html.LabelFor(x => x.DishName) @Html.TextBoxFor(x => x.DishName)
+    <br />
+    @Html.LabelFor(x => x.DishDescription) @Html.TextBoxFor(x => x.DishDescription)
+
+    string[] options = new string[4] { "Main", "Side", "Veg", "Desert" };
+
+    <br />
+    @Html.LabelFor(x => x.FoodOption) @Html.DropDownListFor(x => x.FoodOption, new SelectList(options))
+
+    <br />
+    @Html.LabelFor(x => x.PhoneNumber) @Html.TextBoxFor(x => x.PhoneNumber)
+
+    <input class="btn" type="submit" value="Register" />
+}

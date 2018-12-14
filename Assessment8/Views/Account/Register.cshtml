@@ -1,0 +1,36 @@
+﻿@model Assessment8.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+
+
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+    @Html.LabelFor(x => x.Email) @Html.TextBoxFor(x => x.Email)
+    <br />
+    @Html.LabelFor(x => x.FirstName) @Html.TextBoxFor(x => x.FirstName)
+    <br />
+    @Html.LabelFor(x => x.LastName) @Html.TextBoxFor(x => x.LastName)
+    <br />
+    @Html.LabelFor(x => x.AttendanceDate) @Html.TextBoxFor(x => x.AttendanceDate, new { type = "date", min = "2018-12-20", max = "2018-12-21" })
+    <br />
+    @Html.LabelFor(x => x.Guest) @Html.TextBoxFor(x => x.Guest, new { Value = "none" }) <p>(Leave "none" for no guest, or type guest name)</p>
+    <br />
+    @Html.LabelFor(x => x.Password) @Html.PasswordFor(x => x.Password)
+    <br />
+    @Html.LabelFor(x => x.ConfirmPassword) @Html.PasswordFor(x => x.ConfirmPassword)
+    <br />
+    <input class="btn" type="submit" value="Register" />
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<a href="~/home/index/"><button class="btn-danger">NEVERMIND, I DON'T WANT TO SIGN UP!</button></a>
