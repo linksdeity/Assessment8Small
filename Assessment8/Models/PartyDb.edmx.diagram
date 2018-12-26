@@ -6,7 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="93bd2a687d724b74bb461e14e54a375a" Name="Diagram1">
         <EntityTypeShape EntityType="TimPartyDbModel.Dish" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="TimPartyDbModel.Guest" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TimPartyDbModel.Character" Width="1.5" PointX="5.125" PointY="0.875" />
+        <EntityTypeShape EntityType="TimPartyDbModel.Guest" Width="1.5" PointX="2.875" PointY="0.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

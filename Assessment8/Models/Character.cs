@@ -15,22 +15,20 @@ namespace Assessment8.Models
 using System;
     using System.Collections.Generic;
     
-public partial class Dish
+public partial class Character
 {
 
-    public int DishID { get; set; }
+    public int CharacterID { get; set; }
 
-    public string PersonName { get; set; }
+    public string Name { get; set; }
 
-    public string PhoneNumber { get; set; }
+    public string Allegiance { get; set; }
 
-    public string DishName { get; set; }
-
-    public string DishDescription { get; set; }
+    public string Book { get; set; }
 
     public string Email { get; set; }
 
-    public string FoodOption { get; set; }
+    public string URL { get; set; }
 
 }
 

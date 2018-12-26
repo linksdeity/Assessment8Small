@@ -2,11 +2,7 @@
 @{
     ViewBag.Title = "Register";
 }
-
 <h2>Register</h2>
-
-
-
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post))
 {
@@ -25,8 +21,82 @@
     <br />
     @Html.LabelFor(x => x.ConfirmPassword) @Html.PasswordFor(x => x.ConfirmPassword)
     <br />
+
+    Assessment8.Models.GotCharacter first = new Assessment8.Models.GotCharacter();
+    Assessment8.Models.GotCharacter second = new Assessment8.Models.GotCharacter();
+    Assessment8.Models.GotCharacter third = new Assessment8.Models.GotCharacter();
+    Assessment8.Models.GotCharacter fourth = new Assessment8.Models.GotCharacter();
+    Assessment8.Models.GotCharacter fifth = new Assessment8.Models.GotCharacter();
+
+    List<Assessment8.Models.GotCharacter> options = new List<Assessment8.Models.GotCharacter>();
+
+    options.Add(first);
+    options.Add(second);
+    options.Add(third);
+    options.Add(fourth);
+    options.Add(fifth);
+
+
+    if (ViewBag.GoT5 != null)
+    {
+        int counter = 0;
+
+        foreach (Assessment8.Models.GotCharacter character in options)
+        {
+
+            if (ViewBag.GoT5["characters"][counter]["name"] != null)
+            {
+                character.Name = ViewBag.GoT5["characters"][counter]["name"];
+            }
+            else
+            {
+                character.Name = "unnamed character";
+            }
+
+            character.URL = ViewBag.Got5["characters"][counter]["url"];
+
+
+
+            if (ViewBag.GoT5["characters"][counter]["books"].Count > 0)
+            {
+                character.Book = (string)ViewBag.GoT5["characters"][counter]["books"][0];
+            }
+            else
+            {
+                character.Book = "none";
+            }
+
+
+
+            if (ViewBag.GoT5["characters"][counter]["allegiances"].Count > 0)
+            {
+                character.Allegiance = (string)ViewBag.GoT5["characters"][counter]["allegiances"][0];
+            }
+            else
+            {
+                character.Allegiance = "none";
+            }
+
+            counter++;
+
+        }
+    }
+    <br />
+    @Html.LabelFor(x => x.GoTCharacter) @Html.DropDownListFor(x => x.GoTCharacter, new[] {
+
+                                       new SelectListItem{ Text = first.Name, Value = first.URL},
+                                       new SelectListItem{ Text = second.Name,Value = second.URL},
+                                       new SelectListItem{ Text = third.Name, Value = third.URL},
+                                       new SelectListItem{ Text = fourth.Name, Value = fourth.URL},
+                                       new SelectListItem{ Text = fifth.Name, Value = fifth.URL},
+
+                                   })
+
+
     <input class="btn" type="submit" value="Register" />
 }
+
+
 
 <br />
 <br />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json.Linq;
 
 namespace Assessment8.Models
 {
@@ -30,6 +31,11 @@ namespace Assessment8.Models
         [RegularExpression(@"[a-zA-Z\s]*", ErrorMessage = "Guest should be 'none' or guest name with letters and spaces only")]
         [StringLength(50, ErrorMessage = "Guest name must be less than 50 characters")]
         public string Guest { get; set; }
+
+        //==================================================got stuff
+        [Required]
+        public GotCharacter GoTCharacter { get; set; }
+
 
 
         //-------------identity stuff

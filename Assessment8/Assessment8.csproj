@@ -167,10 +167,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Character.cs">
+      <DependentUpon>PartyDb.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Dish.cs">
       <DependentUpon>PartyDb.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DishModel.cs" />
+    <Compile Include="Models\GotCharacter.cs" />
     <Compile Include="Models\Guest.cs">
       <DependentUpon>PartyDb.tt</DependentUpon>
     </Compile>

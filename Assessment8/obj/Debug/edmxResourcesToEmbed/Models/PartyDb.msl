@@ -14,6 +14,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Characters">
+      <EntityTypeMapping TypeName="TimPartyDbModel.Character">
+        <MappingFragment StoreEntitySet="Character">
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Book" ColumnName="Book" />
+          <ScalarProperty Name="Allegiance" ColumnName="Allegiance" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CharacterID" ColumnName="CharacterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Guests">
       <EntityTypeMapping TypeName="TimPartyDbModel.Guest">
         <MappingFragment StoreEntitySet="Guest">
